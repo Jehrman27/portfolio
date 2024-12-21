@@ -21,9 +21,11 @@ jobs:
           node-version: 22
           cache: "pnpm"
 
-      # Step 3: Install pnpm
-      - name: Install pnpm
-        run: npm install -g pnpm
+      # Step 3: Setup pnpm
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: 7
 
       # Step 4: Install dependencies using pnpm
       - name: Install dependencies
