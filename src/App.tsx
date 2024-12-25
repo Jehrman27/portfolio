@@ -2,6 +2,7 @@ import HeroImg from "./components/HeroImg/HeroImg";
 import Socials from "./components/Socials/Socials";
 import Footer from "./components/Footer/Footer";
 import styles from "./App.module.css";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   return (
@@ -16,6 +17,10 @@ function App() {
           Developer. This is a space to check out what I'm working on!
         </p>
         <p>(Currently it's this website)</p>
+      </section>
+      <section className={styles.projects}>
+        <h2>Projects</h2>
+        <Projects />
       </section>
       <aside className={styles.socials}>
         <Socials />
