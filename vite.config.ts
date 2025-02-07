@@ -8,4 +8,7 @@ export default defineConfig({
     outDir: "dist",
   },
   plugins: [react()],
+  server: {
+    open: true,
+  },
 });

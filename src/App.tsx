@@ -3,8 +3,22 @@ import Socials from "./components/Socials/Socials";
 import Footer from "./components/Footer/Footer";
 import styles from "./App.module.css";
 import Projects from "./components/Projects/Projects";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [isLightMode, setIsLightMode] = useState(false);
+
+  useEffect(() => {
+    if (isLightMode) {
+      document.documentElement.classList.add("light-mode");
+    } else {
+      document.documentElement.classList.remove("light-mode");
+    }
+  }, [isLightMode]);
+
+  const toggleMode = () => {
+    setIsLightMode((prevMode) => !prevMode);
+  };
   return (
     <>
       <section className={styles.hero}>
@@ -28,6 +42,13 @@ function App() {
       <section className={styles.footer}>
         <Footer />
       </section>
+      <button onClick={toggleMode} className={styles.toggleMode}>
+        {isLightMode ? (
+          <img src="./images/dark_mode.svg" alt="dark mode" />
+        ) : (
+          <img src="./images/light_mode.svg" alt="light mode" />
+        )}
+      </button>
     </>
   );
 }
