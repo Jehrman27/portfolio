@@ -1,9 +1,9 @@
+import { useEffect, useState } from "react";
 import HeroImg from "./components/HeroImg/HeroImg";
 import Socials from "./components/Socials/Socials";
 import Footer from "./components/Footer/Footer";
-import styles from "./App.module.css";
 import Projects from "./components/Projects/Projects";
-import { useEffect, useState } from "react";
+import styles from "./App.module.css";
 
 function App() {
   const [isLightMode, setIsLightMode] = useState(false);
