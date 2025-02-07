@@ -36,12 +36,12 @@ function App() {
         <h2>Projects</h2>
         <Projects />
       </section>
-      <aside className={styles.socials}>
-        <Socials />
-      </aside>
       <section className={styles.footer}>
         <Footer />
       </section>
+      <nav className={styles.socials}>
+        <Socials />
+      </nav>
       <button onClick={toggleMode} className={styles.toggleMode}>
         {isLightMode ? (
           <img src="./images/dark_mode.svg" alt="dark mode" />
